@@ -18,6 +18,7 @@ for root, dirs, files in os.walk(slides_path):
 print('Slides path:', slides_path)
 print('Available slides:' , all_slides)
 
+
 @app.route('/')
 def index():
     return flask.render_template('index.html')
