@@ -1,17 +1,8 @@
 import os
-from flask import Flask , make_response 
+from flask import Flask , make_response , render_template_string
 from views.selectSlides import selectSlidesHtml
 from views.showSlide import showSlideHtml
-
-# Setting variables
-SLIDES_DIR = '_slides'
-PORT = 8888
-
-# Colors for logging messages
-GREEN = '\033[92m'
-BLUE = '\033[94m'
-RED = '\033[91m'
-ENDC = '\033[0m'
+from config import *
 
 app = Flask(__name__ )
 app.static_folder = 'static'
@@ -78,7 +69,7 @@ def getMarkdownContent(name):
 @app.route('/slide/<name>')
 def showSlide(name):
     # using slideHtml
-    return showSlideHtml.replace('{name}', name)
+    return render_template_string(showSlideHtml, name=name, SLIDE_THEME=SLIDE_THEME, SYNTAX_HIGHLIGHT_LANG=SYNTAX_HIGHLIGHT_LANG, SYNTAX_HIGHLIGHT_THEME=SYNTAX_HIGHLIGHT_THEME, VERTICAL_SLIDE_SEPARATOR=VERTICAL_SLIDE_SEPARATOR, HORIZON_SLIDE_SEPARATOR=HORIZON_SLIDE_SEPARATOR)
 
 
 if __name__ == '__main__':

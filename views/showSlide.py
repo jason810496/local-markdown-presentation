@@ -5,16 +5,15 @@ showSlideHtml = '''
     <meta charset="utf-8">
     <title>Slide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/{{SLIDE_THEME}}.css">
     
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
-    <!-- add other language support : pyhton3 , cpp , javascript  ,bash , json -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/{{SYNTAX_HIGHLIGHT_THEME}}.min.css">
+    <!-- add other language support : 'python', 'javascript', 'html', 'css', 'bash' , 'json' -->
+
+    {%- for lang in SYNTAX_HIGHLIGHT_LANG %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/{{lang}}.min.js"></script>
+    {%- endfor %}
 
     <title>Slide</title>
     <link rel="apple-touch-icon" sizes="180x180" href="static/favicons/apple-touch-icon.png">
@@ -25,7 +24,7 @@ showSlideHtml = '''
 <body>
     <div class="reveal">
         <div class="slides">
-            <section data-markdown="../markdown/{name} " data-separator="^\n---\n$" data-separator-vertical="^\n----\n$" data-notes="^Note:"></section>
+            <section data-markdown="../markdown/{{name}} " data-separator="{{HORIZON_SLIDE_SEPARATOR}}" data-separator-vertical="{{VERTICAL_SLIDE_SEPARATOR}}" data-notes="^Note:"></section>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
