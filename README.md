@@ -9,7 +9,7 @@ Features :
 
 ## Demo
 
-https://github.com/jason810496/local-markdown-presentation/assets/68415893/2ba99ca1-017b-4574-b21b-d12c3f0e48fe
+https://github.com/jason810496/local-markdown-presentation/assets/68415893/9d3adabc-17e6-4a5a-9e98-665d53bece88
 
 ## Usage
 ```bash
