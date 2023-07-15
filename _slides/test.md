@@ -1,39 +1,50 @@
 
-# Python Tutorial 🐍
+# Just For Test
 
 ---
 
-## 📍 `GMJH`
-#### ⏱ `2023/07/10` ~ `2023/07/11`
-
-----
-
-## Basic Topic
-- syntax
-- containers
-- class
-- function
-- module
-
-----
-
-## Labs
-- console program
-- online judge
-
-----
-
-## Advances Topic 
-- data visualization
-- web crawler
-- web server
+# From Reveal.js Example
 
 ---
 
-# Before we start ... 
+## Demo 1
+Slide 1
+
+---
+
+## Demo 1
+Slide 2
+
+---
+
+## Demo 1
+Slide 3
 
 ----
 
-## 1. Tools
-## 2. About me
-## 3. Warm up
+## Demo 2
+
+Slide 1.1
+
+----
+
+## Demo 2
+Slide 1.2
+
+----
+
+## Demo 2
+Slide 2
+
+----
+
+```cpp
+/* All of the options in this arg are valid, so handle them. */
+p = arg + 1;
+do {
+    if (*p == 'n')
+        nflag = 0;
+    if (*p == 'e')
+        eflag = '\\';
+} while (*++p); 
+```
