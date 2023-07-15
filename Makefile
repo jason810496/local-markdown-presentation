@@ -1,4 +1,4 @@
 init:
 	poetry install
 start:
-	poetry run flask --app showSlide.py run
+	poetry run flask --app app.py run
