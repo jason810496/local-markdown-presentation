@@ -1,0 +1,17 @@
+# basic .dockerignore for python projects
+
+# Git
+.git
+.gitignore
+
+# Docker
+.dockerignore
+Dockerfile
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+
+# Distribution / packaging
+venv
+poetry.lock
+pyproject.toml
